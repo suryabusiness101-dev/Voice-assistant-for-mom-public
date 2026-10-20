@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Phase 3 feature 1 config for AssistantAccessibilityService.
+
+  Capabilities the on-screen share needs:
+   - canRetrieveWindowContent + flagRetrieveInteractiveWindows: read the node tree of
+     whatever app is in front (Instagram, the share sheet, WhatsApp).
+   - flagReportViewIds: so viewIdResourceName is populated — used to spot WhatsApp's
+     send button when its label is just an icon.
+   - flagIncludeNotImportantViews: some apps mark share/send controls not-important
+     for accessibility; without this they are invisible to the scan.
+   - canPerformGestures: WhatsApp's share-picker rows and send controls are not
+     node-clickable (custom touch handling); a synthesized tap at their on-screen
+     bounds is the only reliable way to activate them.
+   - typeWindowStateChanged / typeWindowsChanged: track which app is in front so the
+     state machine knows when the share sheet / WhatsApp have opened.
+   - typeWindowContentChanged: re-scan when a sheet populates in place.
+   - flagRequestAccessibilityButton: expose the system Accessibility Button as a
+     second, no-permission way to start a voice turn (see registerAccessibilityButton()).
+
+  This is the real "full control of your device" consent screen she sees in
+  Settings -> Accessibility.
+-->
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/accessibility_service_description"
+    android:accessibilityEventTypes="typeWindowStateChanged|typeWindowContentChanged|typeWindowsChanged"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:accessibilityFlags="flagDefault|flagRetrieveInteractiveWindows|flagReportViewIds|flagIncludeNotImportantViews|flagRequestAccessibilityButton"
+    android:canRetrieveWindowContent="true"
+    android:canPerformGestures="true"
+    android:notificationTimeout="100" />

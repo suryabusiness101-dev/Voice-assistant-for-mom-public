@@ -1,0 +1,19 @@
+local.properties
+.env
+*.iml
+.idea/
+.gradle/
+.gradle-home/
+build/
+app/build/
+.manualbuild/
+.buildtools-cache/
+*.apk
+*.keystore
+*.jks
+keystore_base64.txt
+.kotlin/
+
+# on-device test logcat captures
+*.log
+share_test_*.log

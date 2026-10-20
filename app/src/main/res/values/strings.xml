@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Maa Assistant</string>
+
+    <string name="btn_tap_to_speak">बोलिए</string>
+    <string name="btn_listening">सुन रही हूँ…</string>
+
+    <string name="status_idle">बटन दबाकर बोलिए</string>
+    <string name="status_listening">सुन रही हूँ…</string>
+    <string name="status_thinking">समझ रही हूँ…</string>
+    <string name="status_speaking">जवाब दे रही हूँ…</string>
+    <string name="status_error">फिर से कोशिश कीजिए</string>
+    <string name="status_no_key">API key नहीं मिली</string>
+    <string name="status_no_mic">माइक की अनुमति चाहिए</string>
+
+    <!-- Robustness fallbacks (2026-09-06): no internet, missing Hindi TTS voice. -->
+    <string name="err_no_internet">internet नहीं है। network आने पर फिर बोलिए।</string>
+    <string name="tts_needs_voice">एक बार Hindi voice download करनी होगी। screen पर दिए steps पूरे कर दीजिए।</string>
+    <string name="tts_unavailable">इस phone में Hindi voice उपलब्ध नहीं है।</string>
+
+    <!-- "Anywhere" trigger — floating bubble + foreground service. -->
+    <string name="btn_bubble_on">कहीं से भी बोलें: चालू करें</string>
+    <string name="btn_bubble_off">कहीं से भी बोलें: बंद करें</string>
+    <string name="bubble_needs_permission">bubble के लिए "दूसरे apps के ऊपर दिखाएँ" permission चाहिए। settings खोल रही हूँ।</string>
+    <string name="bubble_enabled_toast">अब किसी भी app में नीले बटन को दबाकर बोल सकती हैं</string>
+    <string name="bubble_content_desc">Maa Assistant — बोलने के लिए दबाएँ</string>
+    <string name="setup_overlay_hint">एक बार "दूसरे apps के ऊपर दिखाएँ" की permission दे दीजिए ताकि आप कहीं से भी बोल सकें।</string>
+    <string name="notif_channel_name">Maa Assistant</string>
+    <string name="notif_idle">कहीं से भी बोलने के लिए तैयार</string>
+
+    <string name="btn_wrong">यह ग़लत था</string>
+    <string name="correction_title">उनका असली मतलब क्या था?</string>
+    <string name="correction_hint">यहाँ सही बात लिखिए…</string>
+    <string name="correction_heard_prefix">सुना गया: %1$s</string>
+    <string name="correction_no_heard">पिछली बात समझ में नहीं आई थी</string>
+    <string name="correction_save">सहेजें</string>
+    <string name="correction_cancel">रहने दें</string>
+    <string name="correction_saved">सुधार सहेज लिया</string>
+
+    <!-- Phase 2 — Tier 1 action feedback. Spoken back so she always knows what happened.
+         Natural everyday Hinglish: action/tech words stay in English, grammar stays Hindi. -->
+    <string name="act_ringer_normal">ringer normal कर दिया</string>
+    <string name="act_ringer_silent">phone silent कर दिया</string>
+    <string name="act_ringer_vibrate">phone vibrate पर लगा दिया</string>
+    <string name="act_ringer_needs_dnd">ringer बदलने के लिए एक बार permission देनी होगी। settings खोल रही हूँ, वहाँ इस app को चालू कर दीजिए।</string>
+    <string name="act_ringer_failed">माफ़ कीजिए, ringer change नहीं कर पाई।</string>
+
+    <string name="act_contact_saved">contact save कर दिया</string>
+    <string name="act_contact_needs_perm">contact save करने की permission चाहिए। permission देकर फिर बोलिए।</string>
+    <string name="act_contact_bad_number">number ठीक से समझ नहीं आया। दोबारा बोलिए।</string>
+    <string name="act_contact_bad_name">नाम ठीक से समझ नहीं आया। दोबारा बोलिए।</string>
+    <string name="act_contact_failed">माफ़ कीजिए, contact save नहीं हो पाया।</string>
+
+    <string name="act_call_placing">%1$s को call कर रही हूँ</string>
+    <string name="act_call_needs_perm">call करने की permission चाहिए। permission देकर फिर बोलिए।</string>
+    <string name="act_call_not_found">यह नाम आपके contacts में नहीं मिला। दोबारा बताइए किसे call करना है।</string>
+    <string name="act_call_ambiguous">इस नाम से मिलते-जुलते कई contacts हैं। पूरा नाम बोलिए।</string>
+    <string name="act_call_placing_home">मदद के लिए घर पर call कर रही हूँ</string>
+    <string name="act_call_helper_not_found">%1$s का number contacts में ठीक से नहीं मिला। घर में किसी को call करके बताइए।</string>
+    <string name="act_call_failed">माफ़ कीजिए, call नहीं लग पाई।</string>
+
+    <!-- send_sms opens the Messages app with everything filled in; she taps send. -->
+    <string name="act_sms_ready">%1$s को message तैयार कर दिया, भेजने के लिए tap कीजिए</string>
+    <string name="act_sms_needs_perm">message के लिए contacts की permission चाहिए। permission देकर फिर बोलिए।</string>
+    <string name="act_sms_not_found">यह नाम आपके contacts में नहीं मिला। दोबारा बताइए किसे message भेजना है।</string>
+    <string name="act_sms_ambiguous">इस नाम से मिलते-जुलते कई contacts हैं। पूरा नाम बोलिए।</string>
+    <string name="act_sms_empty">message में क्या लिखना है, यह समझ नहीं आया। दोबारा बोलिए।</string>
+    <string name="act_sms_failed">माफ़ कीजिए, message तैयार नहीं कर पाई।</string>
+
+    <string name="act_alarm_set">%1$s का alarm लगा दिया</string>
+    <string name="act_alarm_bad_time">alarm का समय समझ नहीं आया। दोबारा बोलिए।</string>
+    <string name="act_alarm_no_clock">इस phone में clock app नहीं मिला।</string>
+    <string name="act_alarm_failed">माफ़ कीजिए, alarm नहीं लगा पाई।</string>
+
+    <!-- Phase 3 feature 1 — share on-screen content to WhatsApp (accessibility-driven).
+         Spoken feedback: an immediate "starting" line, then a deterministic outcome line
+         from the service. Same Hinglish style as the Phase 2 act_* lines. -->
+    <string name="act_share_starting">%1$s को WhatsApp पर share कर रही हूँ, थोड़ा इंतज़ार कीजिए</string>
+    <string name="act_share_who">किसे share करना है, group या नाम बताइए</string>
+    <string name="act_share_needs_a11y">screen share करने के लिए एक बार settings में Maa Assistant को permission देनी होगी। settings खोल रही हूँ, वहाँ इसे चालू कर दीजिए।</string>
+    <string name="act_share_no_source">पहले वो video या photo खोलिए, फिर share बोलिए</string>
+    <string name="act_share_source_not_open">वो app नहीं खुल पाया</string>
+    <string name="act_share_no_button">share button नहीं मिला</string>
+    <string name="act_share_no_whatsapp">share list में WhatsApp नहीं मिला</string>
+    <string name="act_share_whatsapp_not_open">WhatsApp नहीं खुल पाया</string>
+    <string name="act_share_contact_not_found">WhatsApp में %1$s नहीं मिला</string>
+    <string name="act_share_contact_ambiguous">WhatsApp में इस नाम की कई chat हैं, पूरा नाम बोलिए</string>
+    <string name="act_share_whatsapp_locked">पहले WhatsApp खोलकर unlock कीजिए, फिर दोबारा share बोलिए</string>
+    <string name="act_share_no_send">भेजने वाला button नहीं मिला</string>
+    <string name="act_share_done">%1$s को WhatsApp पर share कर दिया</string>
+    <string name="act_share_failed">माफ़ कीजिए, share नहीं कर पाई</string>
+    <string name="act_share_timeout">share पूरा नहीं हो पाया, दोबारा कोशिश कीजिए</string>
+
+    <!-- Phase 3 features A/B — Hotstar search_and_open + switch_profile. Main-app-trigger only. -->
+    <string name="act_needs_main_app">इसके लिए पहले Maa Assistant app खोलिए, फिर बोलिए</string>
+    <string name="act_a11y_needs_permission">यह करने के लिए एक बार settings में Maa Assistant को permission देनी होगी। settings खोल रही हूँ, वहाँ इसे चालू कर दीजिए।</string>
+    <string name="act_hotstar_only">अभी सिर्फ Hotstar के लिए यह feature काम करती है</string>
+    <string name="act_hotstar_not_installed">Hotstar app नहीं मिला</string>
+    <string name="act_hotstar_not_open">Hotstar खुल नहीं पाया</string>
+
+    <string name="act_search_starting">%1$s के लिए search कर रही हूँ, थोड़ा इंतज़ार कीजिए</string>
+    <string name="act_search_what">Hotstar पर क्या search करना है, नाम बताइए</string>
+    <string name="act_search_no_search">Hotstar में search नहीं खुल पाया</string>
+    <string name="act_search_no_results">%1$s के लिए Hotstar में कुछ नहीं मिला</string>
+    <string name="act_search_opened">%1$s खोल दिया</string>
+    <string name="act_search_timeout">search पूरा नहीं हो पाया, दोबारा कोशिश कीजिए</string>
+
+    <string name="act_profile_starting">Hotstar पर profile switch कर रही हूँ, थोड़ा इंतज़ार कीजिए</string>
+    <string name="act_profile_no_entry">Hotstar में profile वाला option नहीं मिला</string>
+    <string name="act_profile_no_switch_option">Hotstar में switch profile वाला option नहीं मिला</string>
+    <string name="act_profile_no_tiles">आपका profile नहीं मिला</string>
+    <string name="act_profile_switched">profile switch कर दिया</string>
+    <string name="act_profile_timeout">profile switch पूरा नहीं हो पाया, दोबारा कोशिश कीजिए</string>
+
+    <!-- Phase 3 groundwork — shown in Settings → Accessibility for the service. -->
+    <string name="accessibility_service_description">इसे चालू करने पर Maa Assistant screen देख सकती है और आपके लिए tap कर सकती है — जैसे कोई video WhatsApp group पर share करना, Hotstar में कुछ खोजना, या profile बदलना।</string>
+
+    <!-- search_web / search_youtube (2026-09-11) — live search instead of Gemini guessing from
+         stale training knowledge. Available from anywhere, like the Tier 1 actions. -->
+    <string name="act_search_web_opening">%1$s के बारे में search कर रही हूँ</string>
+    <string name="act_search_web_empty">क्या search करना है, यह समझ नहीं आया। दोबारा बोलिए।</string>
+    <string name="act_search_web_failed">माफ़ कीजिए, search नहीं खोल पाई।</string>
+
+    <string name="act_search_youtube_opening">%1$s के लिए YouTube पर search कर रही हूँ</string>
+    <string name="act_search_youtube_empty">YouTube पर क्या search करना है, यह समझ नहीं आया। दोबारा बोलिए।</string>
+    <string name="act_search_youtube_failed">माफ़ कीजिए, YouTube search नहीं खोल पाई।</string>
+
+    <!-- troubleshoot_app (2026-10-17) — one fix per turn, see actions/Troubleshooter.kt. %1$s is
+         the app's name. Every line ends by asking her to say whether it worked. -->
+    <string name="ts_which_app">कौन सा app ठीक नहीं चल रहा? app का नाम बताइए।</string>
+    <string name="ts_not_installed">%1$s app phone में नहीं मिला। app का नाम दोबारा बताइए।</string>
+    <string name="ts_internet_ok">internet ठीक है।</string>
+    <string name="ts_internet_offline">अभी internet नहीं चल रहा। WiFi या mobile data चालू कीजिए, फिर बताइए %1$s चला या नहीं।</string>
+    <string name="ts_force_close">%1$s को पूरी तरह बंद कीजिए — recent apps से हटा दीजिए — फिर दोबारा खोलिए। फिर बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_restart_phone">अब phone को एक बार बंद करके दोबारा चालू कीजिए। फिर %1$s खोलकर बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_clear_cache">%1$s की settings खोल दी है। Storage पर tap कीजिए, फिर Clear cache दबाइए। फिर %1$s खोलकर बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_clear_cache_manual">Settings में Apps खोलकर %1$s चुनिए। Storage पर tap कीजिए, फिर Clear cache दबाइए। फिर बताइए ठीक हुआ या नहीं।</string>
+    <!-- Xiaomi/Redmi/POCO (MIUI/HyperOS): no Clear cache under Storage — the bottom "Clear data"
+         button opens a menu with "Clear all data" above "Clear cache" (verified on a HyperOS device). -->
+    <string name="ts_clear_cache_xiaomi">%1$s की settings खोल दी है। नीचे Clear data वाला button दबाइए, फिर छोटे menu में Clear cache चुनिए — Clear all data मत दबाइए। फिर %1$s खोलकर बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_clear_cache_manual_xiaomi">Settings में Apps खोलकर %1$s चुनिए। नीचे Clear data वाला button दबाइए, फिर छोटे menu में Clear cache चुनिए — Clear all data मत दबाइए। फिर बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_update">Play Store में %1$s खोल दिया है। Update का button दिखे तो दबाइए। फिर %1$s खोलकर बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_update_manual">Play Store खोलकर %1$s ढूँढिए, Update का button दिखे तो दबाइए। फिर बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_clear_data_confirm">अगला तरीका है %1$s का data साफ़ करना। इससे आप %1$s से logout हो जाएँगी, और दोबारा login के लिए number और OTP चाहिए होगा। क्या आपके पास login और OTP है? हाँ या ना बोलिए।</string>
+    <string name="ts_reask_clear_data">data साफ़ करने से आप %1$s से logout हो जाएँगी। क्या आपके पास login और OTP है? हाँ या ना बोलिए।</string>
+    <string name="ts_clear_data">%1$s की settings खोल दी है। Storage पर tap कीजिए, फिर Clear data दबाइए। फिर %1$s खोलकर login कीजिए, और बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_clear_data_manual">Settings में Apps खोलकर %1$s चुनिए। Storage पर tap कीजिए, फिर Clear data दबाइए। फिर login करके बताइए ठीक हुआ या नहीं।</string>
+    <!-- Xiaomi/Redmi/POCO: same bottom-bar "Clear data" menu as the cache step, this time
+         "Clear all data" (verified on a HyperOS device). Not via the Storage page. -->
+    <string name="ts_clear_data_xiaomi">%1$s की settings खोल दी है। नीचे Clear data वाला button दबाइए, फिर छोटे menu में Clear all data चुनिए। अगर OK पूछे, तो OK दबाइए। फिर %1$s दोबारा खोलिए और अपने number और OTP से फिर से login कीजिए। फिर बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_clear_data_manual_xiaomi">Settings में Apps खोलकर %1$s चुनिए। नीचे Clear data वाला button दबाइए, फिर छोटे menu में Clear all data चुनिए। अगर OK पूछे, तो OK दबाइए। फिर %1$s दोबारा खोलिए और अपने number और OTP से फिर से login कीजिए। फिर बताइए ठीक हुआ या नहीं।</string>
+    <string name="ts_clear_data_skipped">ठीक है, data साफ़ नहीं करते।</string>
+    <string name="ts_next">कोई बात नहीं।</string>
+    <string name="ts_still_broken">यह सब करके भी ठीक नहीं हुआ।</string>
+    <string name="ts_offer_call">क्या मैं %1$s को call लगाऊँ, वो मदद कर देंगे? हाँ या ना बोलिए।</string>
+    <string name="ts_offer_call_home">क्या मैं मदद के लिए घर पर call लगाऊँ? हाँ या ना बोलिए।</string>
+    <string name="ts_offer_call_no_helper">घर में किसी को call करके बताइए, वो मदद कर देंगे।</string>
+    <string name="ts_call_declined">ठीक है। जब ज़रूरत हो, मुझसे फिर पूछिए।</string>
+    <string name="ts_reask_fixed">समझ नहीं आया। %1$s अब ठीक चल रहा है? हाँ या ना बोलिए।</string>
+    <string name="ts_fixed">बहुत अच्छा! %1$s ठीक हो गया।</string>
+</resources>
